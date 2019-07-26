@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <a class="navbar-brand" href="#">
+     <img src="assets/images/small-yomang.jpg" alt="Logo" style="width:40px;">
+     YoMang
+   </a>
+
+   <!-- <form class="form-inline">
+      <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-default" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+    </form> -->
+    
+ <div class="container" method="get">
+    <form action="https://www.youtube.com/">
+      <div class="input-group">
+        <input #searchvideo type="text" class="form-control" name="search" placeholder="search video" search=onClick(searchvideo.value)>
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-default" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+    </form> -->
+
+  </nav>
+  <app-bodycomponent></app-bodycomponent>
+  <div class="row" style="margin-top:20px">
+    <p>{{message}}</p>
+    <app-search-results *ngFor="let result of results" [result]="result"></app-search-results>
+  </div>
+
+  

@@ -1,0 +1,8 @@
+<iframe [src]="url" frameborder="0"></iframe>
+<app-search-box (loading)="loading = $event" (results)="updateResults($event)"></app-search-box>
+<div class='container'>   
+    <div class="row" style="margin-top:20px">
+      <p>{{message}}</p>
+      <app-search-result *ngFor="let result of results" (myclick)="myCalledEvent($event)" [result]="result"></app-search-result>
+    </div>
+</div>

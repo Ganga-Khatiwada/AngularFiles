@@ -1,0 +1,11 @@
+  <div class="searchbar">
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/yoomang-logo.png" alt="Logo" style="width:40px;">YooMang
+      </a>
+      <form class="form-inline">
+        <input #onSearch type="text" class="form-control" placeholder="Search" autofocus>
+        <button type="submit" (click)="search(onSearch.value)">Search</button>
+      </form>
+    </nav>
+  </div>
